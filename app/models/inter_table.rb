@@ -1,0 +1,2 @@
+class InterTable < ApplicationRecord
+end

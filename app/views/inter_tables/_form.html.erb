@@ -1,0 +1,67 @@
+<%= form_with(model: inter_table, local: true) do |form| %>
+  <% if inter_table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inter_table.errors.count, "error") %> prohibited this inter_table from being saved:</h2>
+
+      <ul>
+      <% inter_table.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :First_name %>
+    <%= form.text_field :First_name, id: :inter_table_First_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Middle_name %>
+    <%= form.text_field :Middle_name, id: :inter_table_Middle_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Last_name %>
+    <%= form.text_field :Last_name, id: :inter_table_Last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Address %>
+    <%= form.text_area :Address, id: :inter_table_Address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Phone_no %>
+    <%= form.number_field :Phone_no, id: :inter_table_Phone_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Email %>
+    <%= form.text_field :Email, id: :inter_table_Email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DOB %>
+    <%= form.datetime_select :DOB, id: :inter_table_DOB %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Institution %>
+    <%= form.text_field :Institution, id: :inter_table_Institution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Major %>
+    <%= form.text_field :Major, id: :inter_table_Major %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Resume %>
+    <%= form.file_field :Resume, id: :inter_table_Resume %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
